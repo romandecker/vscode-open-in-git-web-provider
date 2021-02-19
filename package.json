@@ -1,0 +1,62 @@
+{
+	"name": "open-in-git-web-provider",
+	"displayName": "Open in git web provider",
+	"description": "",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:open-in-git-web-provider.open-in-git-web-provider"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "open-in-git-web-provider.open-in-git-web-provider",
+				"title": "Open in git web provider"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Open in git web provider",
+			"properties": {
+				"open-in-git-web-provider.urlTemplate": {
+					"type": [
+						"string"
+					],
+					"markdownDescription": "Mustache-template for rendering the URL to open."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/mustache": "^4.1.1",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.53.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vsce": "^1.85.0",
+		"vscode-test": "^1.5.0"
+	},
+	"dependencies": {
+		"mustache": "^4.1.0"
+	}
+}
