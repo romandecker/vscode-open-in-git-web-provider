@@ -58,5 +58,7 @@
 	},
 	"dependencies": {
 		"mustache": "^4.1.0"
-	}
+	},
+	"icon": "https://raw.githubusercontent.com/romandecker/vscode-open-in-git-web-provider/master/images/icon.png",
+	"publisher": "romandecker"
 }
